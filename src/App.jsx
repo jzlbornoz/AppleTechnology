@@ -1,11 +1,11 @@
 import React from 'react';
 import { Layout } from './components/Layout';
-import { Landing } from './containers/Landing';
+import { Home } from './containers/Home';
 
 const App = () => {
     return (
         <Layout>
-            <Landing />
+            <Home />
         </Layout>
     )
 }

@@ -1,11 +1,14 @@
 import React from 'react';
+import '../style/components/Header.css';
 
 const Header = () => {
   return (
     <section className="Header">
-      <p>ATECH</p>
+      <div className='Header-wrapped'>
+        <p>ATECH</p>
+      </div>
     </section>
   )
 }
 
-export  {Header}
+export { Header }
