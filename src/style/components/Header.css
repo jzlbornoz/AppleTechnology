@@ -8,5 +8,10 @@
 }
 
 .Header-wrapped{
-   padding: 15px;
+    display: flex;
+    margin-left: 5px;
+}
+
+.Header-wrapped img {
+    height: 10vh;
 }

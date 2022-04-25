@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <section className="Header">
       <div className='Header-wrapped'>
-        <p>ATECH</p>
+        <img src="https://lh3.googleusercontent.com/Qt_9jT-soriiZkLrpObJFKC5yr0rOyFnpjmA2OfpW23wZxn1_2NOuLZkBvgTwDe9Ly0i=s85" alt="LOGO" />
       </div>
     </section>
   )

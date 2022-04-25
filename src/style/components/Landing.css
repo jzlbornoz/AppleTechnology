@@ -49,6 +49,6 @@
     margin-top: 7px;
 }
 
-.Landing-item p:hover{
+.Landing-item:hover > .Landing-p{
     color: var(--color2);
 }
