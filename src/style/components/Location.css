@@ -1,0 +1,61 @@
+.Location {
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    color: var(--color3);
+}
+.Location-wrapped{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+.Location-text{
+    width: 40%;
+    font-size: 24px;
+
+}
+
+.Location-text h2{
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 35px;
+}
+
+.Location-bar{
+    background-color: var(--color3);
+    margin-top: 25px;
+    width: 250px;
+    height: 5px;
+}
+.Location-map{
+    width: 50%;
+    padding: 20px;
+}
+
+@media (max-width: 1000px){
+	.Location-wrapped{
+		flex-wrap: wrap
+	}
+    .Location-text{
+        width: 100%;
+        font-size: 12px;
+        padding: 15px
+    
+    }
+    .Location-bar{
+        background-color: var(--color3);
+        margin-top: 25px;
+        width: 150px;
+        height: 5px;
+    }
+
+    .Location-map{
+        width: 100%;
+        padding: 20px;
+        height: 70vh;
+        overflow: hidden;
+    }
+
+};

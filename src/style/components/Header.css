@@ -5,6 +5,7 @@
     background-color: var(--color1);
     color: var(--color3);
     top: 0;
+    z-index: 24;
 }
 
 .Header-wrapped{
