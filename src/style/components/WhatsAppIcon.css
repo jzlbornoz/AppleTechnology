@@ -1,0 +1,25 @@
+.WhatsAppIcon{
+    position: fixed;
+    bottom: 5vh;
+    right: 5vh;
+    background-color: var(--color2);
+    padding: 20px;
+    border-radius: 100%;
+    color: var(--color3);
+}
+
+
+.WhatsAppIcon:hover{
+    background-color: #004e04;
+}
+.WhatsAppIcon a{
+    color: var(--color3);
+}
+
+
+@media (max-width: 1000px){
+    .WhatsAppIcon{
+        bottom: 2vh;
+        right: 2vh;
+    }
+}
