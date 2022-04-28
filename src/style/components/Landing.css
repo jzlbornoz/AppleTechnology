@@ -7,8 +7,10 @@
 
 .Landing-wrapped{
     padding: 30px;
-    background-image: url('https://elsumario.com/wp-content/uploads/2020/08/13.2.jpg');
+    background-image: url('/src/assets/desktop.png');
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     height: 60vh;
     color: var(--color3);
 }

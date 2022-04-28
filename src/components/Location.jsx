@@ -1,11 +1,37 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import '../style/components/Location.css';
 import { Map } from './Map';
+
 const Location = () => {
+
+    const textRef = useRef(null);
+    const callBackFuncion = (entries) => {
+        entries.forEach(element => {
+            if (element.isIntersecting) {
+                element.target.classList.add('visible');
+            }else{
+                element.target.classList.remove('visible');
+            }
+        });
+    }
+    const options = {
+        root: null,
+        rootMargin: '100px 0px 0px 100px',
+        threshold: 1.0
+    }
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(callBackFuncion, options);
+        if (textRef.current) {
+            observer.observe(textRef.current);
+            console.log('jhoal')
+        }
+    }, [textRef, options])
+
     return (
         <div className='Location'>
             <div className="Location-wrapped">
-                <div className="Location-text">
+                <div className="Location-text" >
                     <h2>UBICACION</h2>
                     <p>Av. Las Américas, Centro Comercial Plaza Mayor, Planta baja, local LP-16</p>
                     <br />
@@ -17,7 +43,7 @@ const Location = () => {
                     </ul>
                     <div className="Location-bar"></div>
                 </div>
-                <div className="Location-map">
+                <div className="Location-map" ref={textRef}>
                     <Map />
                 </div>
             </div>
