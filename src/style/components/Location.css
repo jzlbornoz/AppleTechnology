@@ -9,12 +9,12 @@
     align-items: center;
     justify-content: center;
     flex-wrap: nowrap;
+    padding: 10px;
 }
 
 .Location-text{
     width: 40%;
     font-size: 24px;
-
 }
 
 .Location-text h2{
@@ -28,19 +28,45 @@
     margin-top: 25px;
     width: 250px;
     height: 5px;
+    opacity: 0;
 }
 .Location-map{
     width: 50%;
     padding: 20px;
     opacity: 0;
+    
 }
-.visible {
-	opacity: 1;
+.visible{
+	-webkit-animation: scale-up-hor-center 0.9s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: scale-up-hor-center 0.9s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    opacity: 1;
 }
+
+@-webkit-keyframes scale-up-hor-center {
+    0% {
+      -webkit-transform: scaleX(0.4);
+              transform: scaleX(0.4);
+    }
+    100% {
+      -webkit-transform: scaleX(1);
+              transform: scaleX(1);
+    }
+  }
+  @keyframes scale-up-hor-center {
+    0% {
+      -webkit-transform: scaleX(0.4);
+              transform: scaleX(0.4);
+    }
+    100% {
+      -webkit-transform: scaleX(1);
+              transform: scaleX(1);
+    }
+  }
 
 @media (max-width: 1000px){
 	.Location-wrapped{
-		flex-wrap: wrap
+		flex-wrap: wrap;
+        height: 100vh;
 	}
     .Location-text{
         width: 100%;
@@ -58,10 +84,7 @@
     .Location-map{
         width: 100%;
         padding: 20px;
-        height: 70vh;
-        overflow: hidden;
-
-        
+        height: 80vh;
     }
 
 }

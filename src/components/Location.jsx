@@ -5,12 +5,13 @@ import { Map } from './Map';
 const Location = () => {
 
     const textRef = useRef(null);
+    const mapRef = useRef(null);
     const callBackFuncion = (entries) => {
         entries.forEach(element => {
             if (element.isIntersecting) {
                 element.target.classList.add('visible');
-            }else{
-                element.target.classList.remove('visible');
+            } else {
+                //element.target.classList.remove('visible');
             }
         });
     }
@@ -24,9 +25,14 @@ const Location = () => {
         const observer = new IntersectionObserver(callBackFuncion, options);
         if (textRef.current) {
             observer.observe(textRef.current);
-            console.log('jhoal')
         }
-    }, [textRef, options])
+    }, [textRef, options]);
+    useEffect(() => {
+        const observer = new IntersectionObserver(callBackFuncion, options);
+        if (mapRef.current) {
+            observer.observe(mapRef.current);
+        }
+    }, [mapRef, options])
 
     return (
         <div className='Location'>
@@ -41,9 +47,9 @@ const Location = () => {
                         <li>10:00am-12:30pm</li>
                         <li>03:00pm-07:30pm</li>
                     </ul>
-                    <div className="Location-bar"></div>
+                    <div className="Location-bar" ref={textRef}></div>
                 </div>
-                <div className="Location-map" ref={textRef}>
+                <div className="Location-map" ref={mapRef}>
                     <Map />
                 </div>
             </div>
