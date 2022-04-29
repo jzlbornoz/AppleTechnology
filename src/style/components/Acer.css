@@ -1,0 +1,38 @@
+.Acer {
+    height: 50vh;
+    width: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 10px 20px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 2rem;
+}
+
+.Acer h3 {
+    font-size: 70px;
+    background: -webkit-linear-gradient(#98de5b, #08e1ae);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.Acer:hover {
+    background-color: #3bb78f;
+    background-image: linear-gradient(315deg, #3bb78f 0%, #0bab64 74%);
+}
+
+.Acer:hover>h3 {
+    background: -webkit-linear-gradient(#ffff, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 1000px) {
+    .Acer {
+        height: 30vh;
+        width: 30vh;
+    }
+
+    .Acer h3 {
+        font-size: 50px;
+    }
+}

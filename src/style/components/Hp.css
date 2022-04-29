@@ -1,0 +1,38 @@
+.Hp {
+    height: 50vh;
+    width: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 10px 20px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 2rem;
+}
+
+.Hp h3 {
+    font-size: 70px;
+    background: -webkit-linear-gradient(#5f0a87, #a4508b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.Hp:hover {
+    background-color: #7f53ac;
+    background-image: linear-gradient(315deg, #7f53ac 0%, #647dee 74%);
+}
+
+.Hp:hover>h3 {
+    background: -webkit-linear-gradient(#ffffff, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 1000px) {
+    .Hp {
+        height: 30vh;
+        width: 30vh;
+    }
+
+    .Hp h3 {
+        font-size: 50px;
+    }
+}
