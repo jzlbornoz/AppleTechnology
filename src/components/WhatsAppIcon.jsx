@@ -1,12 +1,13 @@
 import React from 'react';
 import '../style/components/WhatsAppIcon.css';
 
-const WhatsAppIcon = () => {
+const WhatsAppIcon = ({setOpenModal}) => {
+  const click = () =>{
+    setOpenModal(prevState => !prevState)
+  }
   return (
-    <div className="WhatsAppIcon">
-        <a href="https://api.whatsapp.com/send?phone=584121284000&text=Hola,%20Quiero%20mi%20servicio">
+    <div className="WhatsAppIcon" onClick={click}>
           <i className="fa-solid fa-phone fa-2xl" />
-          </a>
     </div>
   )
 };
