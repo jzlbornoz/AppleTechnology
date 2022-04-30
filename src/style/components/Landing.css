@@ -16,8 +16,9 @@
 }
 
 .Landing-wrapped h2{
-    text-align: center;
-    font-size: 40px;
+    text-align: start;
+    width: 600px;
+    font-size: 70px;
     margin-top: 55px;
 }
 
@@ -55,4 +56,12 @@
 
 .Landing-item:hover > .Landing-p{
     color: var(--color2);
+}
+
+@media (max-width: 1000px) {
+    .Landing-wrapped h2{
+        font-size: 40px;
+        width: auto;
+        margin-top: 80px;
+    }
 }
