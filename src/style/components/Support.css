@@ -18,7 +18,8 @@
 
 @media (max-width: 1000px){
     .Support h2{
-        font-size: 30px;
+        font-size: 35px;
+        padding: 70px;
     }
     .Support-wrapped{
         display: flex;
