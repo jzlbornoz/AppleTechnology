@@ -75,9 +75,11 @@ background-image: linear-gradient(147deg, #000000 0%, #08580c 74%);
   }
 
 @media (max-width: 1000px){
+    .Location{
+        height: auto;
+    }
 	.Location-wrapped{
 		flex-wrap: wrap;
-        height: 100vh;
 	}
     .Location-text{
         width: 100%;
@@ -104,5 +106,11 @@ background-image: linear-gradient(147deg, #000000 0%, #08580c 74%);
         text-align: center;
         font-size: 30px;
         padding: 20px;
+    }
+}
+
+@media (max-width: 300px) {
+    .Location{
+        height: 130vh;
     }
 }

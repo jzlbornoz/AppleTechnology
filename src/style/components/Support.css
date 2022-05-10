@@ -17,6 +17,10 @@
 }
 
 @media (max-width: 1000px){
+    .Support {
+        height: 190vh;
+        width: 100%;
+    }
     .Support h2{
         font-size: 35px;
         padding: 70px;
