@@ -1,8 +1,9 @@
 import React from 'react';
+import '../style/containers/CursosPage.css'
 
 const CursosPage = () => {
     return (
-        <section>Cursos</section>
+        <section className='CursosPage'>Cursos</section>
     )
 }
 

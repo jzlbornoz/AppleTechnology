@@ -14,6 +14,8 @@
 .Header-wrapped{
     display: flex;
     margin-left: 5px;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 .Header-logo{
@@ -22,4 +24,14 @@
     background-image: url(/src/assets/LOGO500.png);
     background-position: center;
     background-size: contain;
+}
+
+.Header-wrapped a{
+    text-decoration: none;
+    color: var(--color3);
+    font-size: 15px;
+}
+
+.Header-wrapped a:hover{
+    color: var(--color2);
 }

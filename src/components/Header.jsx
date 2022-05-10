@@ -8,6 +8,7 @@ const Header = () => {
       <div className='Header-wrapped'>
         <Link to='/'><div className='Header-logo'></div></Link>
         <Link to='cursos'><p>Cursos</p></Link>
+        <Link to='market'><p>Market</p></Link>
       </div>
     </section>
   )
