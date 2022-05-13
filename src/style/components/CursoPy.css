@@ -1,0 +1,88 @@
+.CursoPy{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.CursoPy-wrapped{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    z-index: 2;
+}
+
+.CursoPy-text{
+    width: 50%;
+}
+.CursoPy-text h2{
+    font-size: 40px;
+    padding: 10px 0px ;
+}
+
+.CursoPy-text h2 span{
+    color: #2a5175;
+    
+}
+.CursoPy-button{
+    background-color: #2a5175;
+    margin-top: 20px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    border-radius: 40px;
+    width: 100px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+.CursoPy-button:hover{
+    background-color: #1d3347
+}
+.CursoPy-button a{
+    color: var(--color3);
+    text-decoration: none;
+}
+.Py-logo{
+    background-image: url('https://www.pikpng.com/pngl/b/62-626189_big-image-python-programming-language-clipart.png');
+    background-size: contain;
+    height: 200px;
+    width: 200px;
+}
+.CursoPy-circle{
+    position: absolute;
+    background-color: #1e2933;
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+    clip-path: circle(600px at right 700px);
+}
+
+@media (max-width: 1000px){
+    .CursoPy-wrapped{
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+    .CursoPy-text{
+        color: var(--color3);
+        width: auto;
+        padding: 20px;
+    }
+    .CursoPy-text h2 span{
+        color: #FFD43B;
+    }
+    .CursoPy-button{
+        background-color: #FFD43B;
+        
+    }
+    .CursoPy-button:hover{
+        background-color: #b99b2b;
+    }
+    .CursoPy-button a{
+        color: #2a5175;
+        font-weight: 700;
+    }
+}
