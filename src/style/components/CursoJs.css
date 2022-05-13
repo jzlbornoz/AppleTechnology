@@ -1,0 +1,96 @@
+.CursoJs{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F0db4f;
+    color: #323330;
+}
+.CursoJs-wrapped{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-evenly;
+    z-index: 2;
+}
+
+.CursoJs-text{
+    width: 50%;
+}
+.CursoJs-text h2{
+    font-size: 40px;
+    padding: 10px 0px ;
+    color: var(--color3);
+}
+.CursoJs-text h2 span{
+    color: #323330;
+}
+.Js-logo{
+    background-size: cover;
+    background-image: url('https://www.freepnglogos.com/uploads/javascript-png/javascript-vector-logo-yellow-png-transparent-javascript-vector-12.png');
+    width: 200px;
+    height: 200px;
+}
+
+.CursoJs-line{
+    position: absolute;
+    background-color:#1b1b1b;
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 30%;
+    z-index: 0;
+}
+.CursoJs-button{
+    background-color: #323330;
+    margin-top: 20px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    border-radius: 40px;
+    width: 100px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+.CursoJs-button a{
+    color: #F0db4f;
+    text-decoration: none;
+}
+.CursoJs-button:hover{
+    background-color: var(--color1);
+}
+
+@media (max-width: 1000px){
+    .CursoJs{
+        background-color: #806a1a;
+    }
+    .CursoJs-wrapped{
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+    .CursoJs-text{
+        color: var(--color3);
+        width: auto;
+        padding: 20px;
+    }
+    .CursoJs-text h2 span{
+        color: #FFD43B;
+    }
+    .CursoJs-button{
+        background-color: #FFD43B;
+        
+    }
+    .CursoJs-button:hover{
+        background-color: #b99b2b;
+    }
+    .CursoJs-button a{
+        color: #323330;
+        font-weight: 700;
+    }
+    .CursoJs-line{
+        width: 70%;
+    }
+}

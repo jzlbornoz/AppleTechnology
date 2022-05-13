@@ -1,6 +1,7 @@
 import React from 'react';
 import '../style/containers/CursosPage.css';
 import { CursoPy } from '../components/CursoPy';
+import { CursoJs } from '../components/CursoJs';
 
 const CursosPage = () => {
     return (
@@ -10,7 +11,7 @@ const CursosPage = () => {
                     <CursoPy />
                 </div>
                 <div className="wrapped-js">
-                    
+                    <CursoJs />
                 </div>
             </div>
         </section>
