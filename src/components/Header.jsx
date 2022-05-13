@@ -7,8 +7,10 @@ const Header = () => {
     <section className="Header">
       <div className='Header-wrapped'>
         <Link to='/'><div className='Header-logo'></div></Link>
-        <Link to='cursos'><p>Cursos</p></Link>
-        <Link to='market'><p>Market</p></Link>
+        <ul className="Header-menu">
+          <li><Link to='cursos'>Cursos </Link></li>
+          <li> <Link to='market'>Market</Link></li>
+        </ul>
       </div>
     </section>
   )

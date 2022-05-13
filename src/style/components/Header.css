@@ -26,12 +26,35 @@
     background-size: contain;
 }
 
-.Header-wrapped a{
-    text-decoration: none;
-    color: var(--color3);
-    font-size: 15px;
+/* Menu */
+.Header-menu{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.Header-menu li{
+    padding: 0 15px;
 }
 
-.Header-wrapped a:hover{
-    color: var(--color2);
+.Header-menu a{
+    color: var(--color3);
+    text-decoration: none;
+    position: relative;
+}
+
+.Header-menu a::after{
+    content: '';
+    background-color: var(--color3);
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    top: calc(100% + 2px);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.Header-menu a:hover::after{
+    opacity: 0.9;
 }
