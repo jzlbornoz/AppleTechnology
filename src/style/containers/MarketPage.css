@@ -11,4 +11,12 @@
     top: 30%;
     text-align: center;
     width: 100%;
+    background-color: rgb(41, 41, 41);
+}
+
+@media (max-width: 1000px){
+    .MarketPage-text{
+        font-size: 35px;
+
+    }
 }
