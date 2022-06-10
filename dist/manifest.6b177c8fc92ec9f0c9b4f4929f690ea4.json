@@ -1,0 +1,42 @@
+{
+  "icons": [
+    {
+      "src": "/icon_512x512.3d6673282b8c99589e9c16487c087c8c.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon_384x384.b850e86b3ba4ad015202f10a6913e02a.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon_256x256.ed27d46a9687b0f4421cd6a975289e68.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon_192x192.93e45dc5d596e2c0e622960ce1b7974f.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon_128x128.b1d761d02b1394a9e4042ee6e2f273f4.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon_96x96.1b349131e87de25babc5667714a3da10.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    }
+  ],
+  "name": "Atech-ve",
+  "short_name": "Atech",
+  "orientation": "portrait",
+  "display": "standalone",
+  "start_url": ".",
+  "description": "We are your best option",
+  "background_color": "#030303",
+  "prefer_related_applications": "false"
+}
