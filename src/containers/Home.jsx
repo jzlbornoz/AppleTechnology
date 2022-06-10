@@ -17,7 +17,7 @@ const Home = () => {
       <Support />
       {!!openModal && (
         <Modal>
-          <ContactForm setOpenModal={setOpenModal}/>
+          <ContactForm setOpenModal={setOpenModal} />
         </Modal>
       )}
       <WhatsAppIcon setOpenModal={setOpenModal} />

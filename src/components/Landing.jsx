@@ -5,9 +5,9 @@ const Landing = () => {
     return (
         <section className='Landing'>
             <div className="Landing-wrapped">
-                <h2>Servicio Tecnico Apple</h2>
+                <h2 data-aos="fade-up">Servicio Tecnico Apple</h2>
             </div>
-            <div className="Landing-list">
+            <div className="Landing-list" data-aos="fade-up">
                 <div className='Landing-item'>
                     <img src="https://support.apple.com/content/dam/edam/applecare/images/en_US/promo_icons/macfamily-productnav-imac-icon_2x.png" alt="iMac" />
                     <p className='Landing-p'>iMac</p>

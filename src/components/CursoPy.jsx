@@ -6,7 +6,7 @@ const CursoPy = () => {
         <section className='CursoPy'>
             <div className="CursoPy-circle"></div>
             <div className="CursoPy-wrapped">
-                <section className='CursoPy-text'>
+                <section className='CursoPy-text' data-aos="fade-up">
                 <h2>Curso Básico de <span>Python</span></h2>
                 <p>Aprende a programar desde cero con el lenguaje de mayor crecimiento en el planeta: Python. 
                     Descubre qué es un algoritmo y cómo se construye uno. 

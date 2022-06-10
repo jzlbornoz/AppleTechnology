@@ -13,7 +13,7 @@ const ContactForm = ({ setOpenModal }) => {
 
     return (
         <section className="ContactForm">
-            <div className="Contact-wrapped">
+            <div className="Contact-wrapped" data-aos="fade-up">
                 <button type='button' onClick={click} className='Contact-exit'><i className="fa-solid fa-xmark" /></button>
                 <h2>Contactate con nosotros</h2>
                 <textarea type="text" placeholder='Dejanos tu mensaje' value={messege} onChange={onChange} />

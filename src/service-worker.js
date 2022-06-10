@@ -1,34 +1,53 @@
+
 /* eslint-disable no-restricted-globals */
-/**
- * The workboxSW.precacheAndRoute() method efficiently caches and responds to
- * requests for URLs in the manifest.
- * See https://goo.gl/S9QRab
- */
+import { clientsClaim } from "workbox-core";
+import { ExpirationPlugin } from "workbox-expiration";
+import { precacheAndRoute, createHandlerBoundToURL } from "workbox-precaching";
+import { registerRoute } from "workbox-routing";
+import { StaleWhileRevalidate } from "workbox-strategies";
 
-// Precarga la app
-self.__precacheManifest = [].concat(self.__precacheManifest || [])
-workbox.precaching.suppressWarnings()
-workbox.precaching.precacheAndRoute(self.__precacheManifest, {})
+clientsClaim();
 
-// App Shell
-workbox.routing.registerNavigationRoute('/index.html')
+// Puedes desactivar el precaching reemplazand esta línea
+//precacheAndRoute(self.__WB_MANIFEST);
+// por esta otra:
+ const desactivarPrecache = self.__WB_MANIFEST;
+ // para más info: https://cra.link/PWA
 
-// La API usa Stale While Revalidate para mayor velocidad
-//workbox.routing.registerRoute(/^https?:\/\/www.themealdb.com\/api\/.*/, workbox.strategies.staleWhileRevalidate(),
-//'GET')
+ const fileExtensionRegexp = new RegExp("/[^/?]+\\.[^/]+$");
+registerRoute(
+  // Return false to exempt requests from being fulfilled by index.html.
+  ({ request, url }) => {
+    // If this isn't a navigation, skip.
+    if (request.mode !== "navigate") {
+      return false;
+    } // If this is a URL that starts with /\_, skip.
+    if (url.pathname.startsWith("/_")) {
+      return false;
+    } // If this looks like a URL for a resource, because it contains // a file extension, skip.
+    if (url.pathname.match(fileExtensionRegexp)) {
+      return false;
+    } // Return true to signal that we want to use the handler.
+    return true;
+  },
+  createHandlerBoundToURL(process.env.PUBLIC_URL + "/index.html")
+);
 
-// Last fuentes van con Cache First y vencen al mes
-workbox.routing.registerRoute(/^https:\/\/fonts.(?:googleapis|gstatic).com\/(.*)/,
-    workbox.strategies.cacheFirst({
-        cacheName: 'google-fonts-cache',
-        plugins: [
-            new workbox.expiration.Plugin({
-                maxAgeSeconds: 30 * 24 * 60 * 60
-            })
-        ]
-    }),
-    'GET')
-
-// Todo lo demás usa Network First
-workbox.routing.registerRoute('/index.html', new workbox.strategies.NetworkFirst(), 'GET');
-workbox.routing.registerRoute(/^http?.*/, new workbox.strategies.NetworkFirst(), 'GET');
+registerRoute(
+    // Add in any other file extensions or routing criteria as needed.
+    ({ url }) =>
+      url.origin === self.location.origin && url.pathname.endsWith(".png"), // Customize this strategy as needed, e.g., by changing to CacheFirst.
+    new StaleWhileRevalidate({
+      cacheName: "images",
+      plugins: [
+        // Ensure that once this runtime cache reaches a maximum size the
+        // least-recently used images are removed.
+        new ExpirationPlugin({ maxEntries: 50 }),
+      ],
+    })
+  );
+  self.addEventListener("message", (event) => {
+    if (event.data && event.data.type === "SKIP_WAITING") {
+      self.skipWaiting();
+    }
+  });

@@ -8,7 +8,7 @@ const CursoJs = () => {
         <section className="CursoJs">
             <div className="CursoJs-line"></div>
             <div className="CursoJs-wrapped">
-                <section className='CursoJs-text'>
+                <section className='CursoJs-text' data-aos="fade-up">
                     <h2>Curso Práctico de <span>JavaScript</span></h2>
                     <p>Aprende desarrollo web con JavaScript. Practica los fundamentos de la programación para crear algoritmos que
                         resuelven problemas en la vida real. Convierte problemas en algoritmos con JavaScript y expande su poder

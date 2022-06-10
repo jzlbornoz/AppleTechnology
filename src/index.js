@@ -2,6 +2,8 @@ import React from "react";
 import {createRoot} from 'react-dom/client';
 import { App } from './App';
 import './index.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
@@ -18,3 +20,4 @@ createRoot(
     ).render(
         <App />
     )
+    AOS.init();

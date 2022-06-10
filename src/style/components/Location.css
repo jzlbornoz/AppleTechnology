@@ -44,36 +44,7 @@ background-image: linear-gradient(147deg, #000000 0%, #08580c 74%);
 .Location-map{
     width: 50%;
     padding: 20px;
-    opacity: 0;
-    
 }
-.visible{
-	-webkit-animation: scale-up-hor-center 0.9s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-	        animation: scale-up-hor-center 0.9s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-    opacity: 1;
-}
-
-@-webkit-keyframes scale-up-hor-center {
-    0% {
-      -webkit-transform: scaleX(0.4);
-              transform: scaleX(0.4);
-    }
-    100% {
-      -webkit-transform: scaleX(1);
-              transform: scaleX(1);
-    }
-  }
-  @keyframes scale-up-hor-center {
-    0% {
-      -webkit-transform: scaleX(0.4);
-              transform: scaleX(0.4);
-    }
-    100% {
-      -webkit-transform: scaleX(1);
-              transform: scaleX(1);
-    }
-  }
-
 @media (max-width: 1000px){
     .Location{
         height: auto;
