@@ -12,7 +12,7 @@ const Support = () => {
             <div className='Support-wrapped'>
                 <Dell />
                 <Acer />
-                <Lenovo  />
+                <Lenovo />
                 <Hp />
             </div>
         </section>

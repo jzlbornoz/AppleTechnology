@@ -5,7 +5,7 @@ const Landing = () => {
     return (
         <section className='Landing'>
             <div className="Landing-wrapped">
-                <h2 data-aos="fade-up">Servicio Tecnico Apple</h2>
+                <h2 data-aos="fade-up">Servicio Técnico Apple</h2>
             </div>
             <div className="Landing-list" data-aos="fade-up">
                 <div className='Landing-item'>

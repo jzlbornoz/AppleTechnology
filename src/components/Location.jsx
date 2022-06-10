@@ -7,10 +7,10 @@ const Location = () => {
         <div className='Location'>
             <div className="Location-wrapped">
                 <div className="Location-text" data-aos="fade-up">
-                    <h2>UBICACION</h2>
+                    <h2>Ubicación</h2>
                     <p>Av. Las Américas, Centro Comercial Plaza Mayor, Planta baja, local LP-16</p>
                     <br />
-                    <h3>HORARIO DE TRABAJO</h3>
+                    <h3>Horario de trabajo</h3>
                     <ul>
                         <li>Lunes a Sabado</li>
                         <li>10:00am-12:30pm</li>
